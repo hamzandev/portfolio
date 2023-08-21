@@ -3,6 +3,7 @@ import Link from "next/link";
 import { buttonVariants } from "../ui/button";
 import { BsGithub, BsMoonFill, BsSun } from "react-icons/bs";
 import { BiLinkExternal } from "react-icons/bi";
+import { IoClose } from "react-icons/io5";
 import { HiMenuAlt3 } from "react-icons/hi";
 import { useState } from "react";
 import { Patrick_Hand_SC } from "next/font/google";
@@ -13,20 +14,20 @@ const Navbar = () => {
   const [toggleMenu, setToggleMenu] = useState(false);
   const menus = [
     {
-      title: "About",
-      url: "#about",
-    },
-    {
-      title: "Carrier",
-      url: "#carrier",
-    },
-    {
-      title: "Experience",
-      url: "#experience",
+      title: "Work Experiences",
+      url: "#work-experiences",
     },
     {
       title: "Projects",
       url: "#projects",
+    },
+    {
+      title: "Skills",
+      url: "#skills",
+    },
+    {
+      title: "Education",
+      url: "#education",
     },
     {
       title: "Blog",
@@ -53,24 +54,28 @@ const Navbar = () => {
               className="md:hidden inline"
               onClick={() => setToggleMenu((prev) => !prev)}
             >
-              <HiMenuAlt3 size="24" />
+              {!toggleMenu ? <HiMenuAlt3 size="24" /> : <IoClose size="24" />}
             </button>
           </div>
         </div>
         <div
-          className={`menus md:static inset-x-0 absolute md:h-auto h-max md:bg-inherit bg-white/90 backdrop-blur overflow-hidden ${
-            toggleMenu ? "top-20 px-5" : "-top-[100vh]"
+          className={`menus md:static py-4 inset-x-0 absolute md:h-auto h-max md:bg-inherit bg-background/95 backdrop-blur overflow-hidden ${
+            toggleMenu ? "top-16 px-5" : "-top-[100vh]"
           } md:flex grid duration-300 transition-all items-center md:gap-10 gap-8 text-gray-400`}
         >
           {menus.map((menu) => (
             <Link
               href={menu.url}
-              className={`px-1 md:py-0 py-2 ${
-                menu.title == "About" &&
-                "border-b-2 text-gray-800 border-b-gray-800"
+              className={`px-1 font-bold md:text-start text-center md:py-0 py-2 ${
+                menu.title == "Work Experiences" &&
+                "md:border-b-2 text-gray-800 border-b-gray-800"
               }`}
             >
-              <span className={`font-medium ${menu.title == "Blog" && "flex"}`}>
+              <span
+                className={`font-medium ${
+                  menu.title == "Blog" && "flex justify-center"
+                }`}
+              >
                 {menu.title}{" "}
                 {menu.title == "Blog" && <BiLinkExternal size="12" />}
               </span>
