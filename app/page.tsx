@@ -22,7 +22,7 @@ const Page = () => {
     <>
       <section id="home" className="min-h-screen container mx-auto pt-10">
         <div className="flex md:flex-row flex-col-reverse items-center min-h-[70vh] md:gap-0 gap-10">
-          <div className="md:w-1/2 flex md:flex-row flex-col h-full justify-center md:gap-3 gap-2">
+          <div className="md:w-1/2 flex flex-col h-full justify-center md:gap-3 gap-2">
             <span className="md:text-2xl text-xl font-bold">
               Hi, My Name is
             </span>
