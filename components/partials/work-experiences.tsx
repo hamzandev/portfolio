@@ -1,12 +1,15 @@
 import { Patrick_Hand_SC } from "next/font/google";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "../ui/tabs";
-const stalmate = Patrick_Hand_SC({ subsets: ["latin"], weight: ["400"] });
+export const stalmate = Patrick_Hand_SC({
+  subsets: ["latin"],
+  weight: ["400"],
+});
 
 const WorkExperiences = () => {
   return (
     <section
       id="work-experiences"
-      className="container mx-auto py-10 min-h-screen"
+      className="container mx-auto pt-20 pb-10 min-h-screen"
     >
       <h3 className={`${stalmate.className} flex items-center gap-2`}>
         <span className="text-3xl text-primary font-extrabold text min-w-max">
@@ -20,9 +23,7 @@ const WorkExperiences = () => {
             <TabsTrigger value="job1">
               PT Intellinum Solusi Indonesia
             </TabsTrigger>
-            <TabsTrigger value="job2">
-              PT Intellinum Solusi Indonesia
-            </TabsTrigger>
+            <TabsTrigger value="job2">PT Atlaz Indonesia</TabsTrigger>
             <TabsTrigger value="job3">PT Smartin Teknologi Sistem</TabsTrigger>
           </TabsList>
         </div>
