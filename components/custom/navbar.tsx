@@ -96,7 +96,7 @@ const Navbar = () => {
             </Link>
           ))}
 
-          <Link href={"/about"} className={buttonVariants({ size: "sm" })}>
+          <Link href={"/"} className={buttonVariants({ size: "sm" })}>
             <span className="font-medium">Download CV</span>
           </Link>
         </div>

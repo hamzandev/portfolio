@@ -54,10 +54,10 @@ const Hero = () => {
             I am <HeroTypeAnimation />
           </p>
           <p className="text-foreground/80 mt-3 md:text-left text-justify">
-            I am an experienced front-end developer. I have more than 3 years of
-            working experience as a web developer and a front-end web developer.
-            I am proficient at various programming languages. I enjoy learning
-            and working on new projects related to programming.
+            I am a graduate of the Software Engineering program at Vocation High
+            School. I have two years of experience in building web applications
+            using various programming languages and frameworks. I thoroughly
+            enjoy learning and working on new projects related to programming.
           </p>
           <div className="flex md:flex-row flex-col md:items-center gap-3 mt-5 md:text-lg text-sm">
             <Link
@@ -71,7 +71,7 @@ const Hero = () => {
               Download CV
             </Link>
             <Link
-              href={"#"}
+              href={"https://github.com/hamzandev"}
               className={cn(
                 buttonVariants({ size: "lg", variant: "secondary" }),
                 "flex items-center gap-x-1"

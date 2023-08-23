@@ -5,6 +5,36 @@ export const stalmate = Patrick_Hand_SC({
   weight: ["400"],
 });
 
+const works = [
+  {
+    key: "job1",
+    company: "Universitas Teknologi Sumbawa",
+    position: "Content Writter (Intern)",
+    year: "Oct 2021 - Mar 2022",
+    descripton:
+      "Universitas Teknologi Sumbawa is a private university located in Sumbawa. My job here is :",
+    jobDetail: [
+      "Writing website content using Elementor",
+      "Looking for updated news from Instagram",
+      "Update the 'Rektor News' website",
+    ],
+  },
+  {
+    key: "job2",
+    company: "Universitas Teknologi Sumbawa",
+    position: "IT Support (Intern)",
+    year: "Oct 2021 - Mar 2022",
+    descripton:
+      "Universitas Teknologi Sumbawa is a private university located in Sumbawa. My job here is :",
+    jobDetail: [
+      "LAN network installation",
+      "Performing LAN cable and fiber optic repairs",
+      "Being a committee member for organizing graduation events",
+      "Performing Windows reinstallation in the computer lab",
+    ],
+  },
+];
+
 const WorkExperiences = () => {
   return (
     <section
@@ -20,88 +50,29 @@ const WorkExperiences = () => {
       <Tabs defaultValue="job1" className="mt-10">
         <div className="overflow-x-auto py-3">
           <TabsList>
-            <TabsTrigger value="job1">
-              PT Intellinum Solusi Indonesia
-            </TabsTrigger>
-            <TabsTrigger value="job2">PT Atlaz Indonesia</TabsTrigger>
-            <TabsTrigger value="job3">PT Smartin Teknologi Sistem</TabsTrigger>
+            {works.map((item, i) => (
+              <TabsTrigger key={i} value={item.key}>
+                {item.company}
+              </TabsTrigger>
+            ))}
           </TabsList>
         </div>
-        <TabsContent value="job1">
-          <div className="py-8">
-            <h4 className="text-2xl font-bold">Frontend Developer</h4>
-            <span className="text-sm italic mb-8 inline-block">
-              2023 - (present)
-            </span>
-            <p className="mb-5">
-              PT Intellinum Solusi Indonesia is a company that specializes in IT
-              consulting services. My jobs here is :
-            </p>
-            <ul style={{ listStyle: "outside" }} className="ps-5">
-              <li>Develop new Web Aplication base Micro Front-end</li>
-              <li>Develop new Partial Web App using React</li>
-              <li>Develop with Ant Design</li>
-              <li>Rest API Integration using Axios</li>
-              <li>Maintenence & update feature</li>
-            </ul>
-          </div>
-        </TabsContent>
-        <TabsContent value="job2">
-          <div className="py-8">
-            <h4 className="text-2xl font-bold">Frontend Developer</h4>
-            <span className="text-sm italic mb-8 inline-block">
-              Jan 2022 - Jul 2023
-            </span>
-            <p className="mb-5">
-              PT Atlaz Belajar Bahasa is an education-technology startup company
-              that has a main product consisting of books and an LMS. I built at
-              least 4 web apps. My jobs here is :
-            </p>
-            <ul style={{ listStyle: "outside" }} className="ps-5">
-              <li>
-                Slicing UI/UX design to be web design with HTML,CSS,Tailwind
-                CSS,Bootstrap CSS,SASS
-              </li>
-              <li>Develop all Frontend web app using React JS & Next JS</li>
-              <li>Develop State Management using Redux Toolkit</li>
-              <li>Develop JSON API using laravel & Mysql</li>
-              <li>Integration API using Axios</li>
-              <li>Develop Live web app using socket.io</li>
-              <li>
-                SEO Optimization such as make sitemap.xml, handle meta tags,
-                alt, etc.
-              </li>
-              <li>Maintenence & update feature</li>
-              <li>Design ERD</li>
-            </ul>
-          </div>
-        </TabsContent>
-        <TabsContent value="job3">
-          <div className="py-8">
-            <h4 className="text-2xl font-bold">Web Developer</h4>
-            <span className="text-sm italic mb-8 inline-block">
-              Jan 2021 - Dec 2021
-            </span>
-            <p className="mb-5">
-              PT Smartin Teknologi Sistem is a company that specializes in IT
-              consulting services. My jobs here is :
-            </p>
-            <ul style={{ listStyle: "outside" }} className="ps-5">
-              <li>
-                Slicing UI/UX design to be web design with HTML,CSS,Tailwind
-                CSS,Bootstrap CSS
-              </li>
-              <li>Develop all responsive website</li>
-              <li>Develop Frontend using Jquery & Alphine JS</li>
-              <li>
-                Develop Backend using Laravel with a lot of library like larvel
-                spatie, livewire ect.
-              </li>
-              <li>Develop query database using MySQL & PostgreSQL</li>
-              <li>Maintenence & update feature</li>
-            </ul>
-          </div>
-        </TabsContent>
+        {works.map((work, i) => (
+          <TabsContent key={i} value={work.key}>
+            <div className="py-8">
+              <h4 className="text-2xl font-bold">{work.position}</h4>
+              <span className="text-sm italic mb-8 inline-block">
+                {work.year}
+              </span>
+              <p className="mb-5">{work.descripton}</p>
+              <ul style={{ listStyle: "outside" }} className="ps-5">
+                {work.jobDetail.map((item, i) => (
+                  <li key={i}>{item}</li>
+                ))}
+              </ul>
+            </div>
+          </TabsContent>
+        ))}
       </Tabs>
     </section>
   );
