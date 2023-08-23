@@ -1,31 +1,27 @@
 import React from "react";
 import { stalmate } from "./work-experiences";
 import ProjectCard, { Project } from "../custom/project-card";
+import ied from "@/public/ied.jpg";
+import spp from "@/public/spp-app.jpg";
 
 const projects: Project[] = [
   {
-    name: "Project 1",
-    company: "company 1",
+    name: "Sistem Informasi SPP",
+    company: "SMK Negeri 1 Lopok",
+    image: spp,
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore velit molestiae a, vitae recusandae, ratione officiis obcaecati quia provident labore corporis sint accusantium eius quaerat veniam quis quidem.",
+      "'Sistem Informasi SPP' is a web-based application built to manage school fee payments",
+    year: "2022",
+    techStack: ["Codeigniter 3", "Bootstrap 4", "JQuery", "DataTable"],
+  },
+  {
+    name: "SHIF",
+    company: "Personal",
+    image: ied,
+    description:
+      "SHIF is a website that allows us to send Eid al-Fitr greetings to our relatives simply by sharing a link.",
     year: "2023",
-    techStack: ["Nextjs", "Redux Toolkit", "Tailwindcss", "MySQL", "Prisma"],
-  },
-  {
-    name: "Project 2",
-    year: "2022",
-    company: "company 2",
-    description:
-      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ratione tempore reprehenderit corporis aliquam, obcaecati consequatur inventore officia quis voluptas recusandae!",
-    techStack: ["Laravel", "Innertia(React)", "Tailwindcss", "MySQL"],
-  },
-  {
-    name: "Project 3",
-    company: "company 3",
-    description:
-      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Provident labore obcaecati tempore alias culpa ipsam non modi in necessitatibus, eaque iure, excepturi debitis.",
-    year: "2022",
-    techStack: ["Codeigniter 3", "Bootstrap", "MySQL", "JQuery"],
+    techStack: ["NextJS", "TailwindCSS"],
   },
 ];
 
