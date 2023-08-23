@@ -25,7 +25,7 @@ export default function RootLayout({
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <Navbar />
           <main className="py-20 overflow-y-hidden">{children}</main>
-          <footer className="footer py-4 text-center border-t border-t-foreground/1 bg-foreground/10">
+          <footer className="footer text-sm py-4 text-center border-t border-t-foreground/1 bg-foreground/10">
             <span className="font-medium">
               Created with 💖 by Hamzan Wahyudi.
             </span>

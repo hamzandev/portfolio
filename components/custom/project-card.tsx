@@ -23,7 +23,7 @@ export interface Project {
 
 const ProjectCard = ({ project }: Props) => {
   return (
-    <Card className="overflow-hidden md:min-w-full min-w-[75vw] snap-center">
+    <Card className="overflow-hidden md:min-w-full min-w-[110vw] snap-center">
       <div className="image relative">
         <Image src={p1} alt="project 1" />
         <span className="absolute bottom-0 left-0 bg-background/70 shadow py-1 px-2 rounded-tr rounded-br text-sm italic">
