@@ -96,7 +96,7 @@ const Navbar = () => {
             </Link>
           ))}
 
-          <Link href={"/"} className={buttonVariants({ size: "sm" })}>
+          <Link href={"https://drive.google.com/file/d/1CmGrBLeacosg3vFguRXBJ_HZry_u-CKr/view?usp=sharing"} className={buttonVariants({ size: "sm" })}>
             <span className="font-medium">Download CV</span>
           </Link>
         </div>
