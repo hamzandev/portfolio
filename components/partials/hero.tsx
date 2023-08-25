@@ -61,7 +61,7 @@ const Hero = () => {
           </p>
           <div className="flex md:flex-row flex-col md:items-center gap-3 mt-5 md:text-lg text-sm">
             <Link
-              href={"#"}
+              href={"https://drive.google.com/file/d/1CmGrBLeacosg3vFguRXBJ_HZry_u-CKr/view?usp=sharing"}
               className={cn(
                 buttonVariants({ size: "lg" }),
                 "flex items-center gap-x-1"
